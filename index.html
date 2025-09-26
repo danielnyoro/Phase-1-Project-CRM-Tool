@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadFlow CRM</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    LeadFlow CRM
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Dashboard</a></li>
+                        <li><a href="#">Leads</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-user-plus"></i> Add Lead</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> All Leads</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Reminders</a></li>
+                    <li><a href="#"><i class="fas fa-chart-pie"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </aside>
+            
+            <main class="content">
+                <div class="content-header">
+                    <h2>Lead Management Dashboard</h2>
+                    <button class="btn" id="addLeadBtn"><i class="fas fa-plus"></i> Add New Lead</button>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Total Leads</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Interested</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Pending Actions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Contacted This Week</div>
+                    </div>
+                </div>
+                
+                <div class="tab-container">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="leads">All Leads</div>
+                        <div class="tab" data-tab="interested">Interested Parties</div>
+                        <div class="tab" data-tab="reminders">Reminders</div>
+                    </div>
+                    
+                    <div class="tab-content active" id="leads-tab">
+                        <div class="lead-card">
+                            <div class="lead-header">
+                                <div class="lead-name">John Smith</div>
+                                <div class="lead-status">
+                                    <span class="status-badge interested">Interested</span>
+                                </div>
+                            </div>
+                            <div class="lead-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">john.smith@example.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Phone</span>
+                                    <span class="detail-value">(555) 123-4567</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Company</span>
+                                    <span class="detail-value">Smith & Co.</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Interest Level</span>
+                                    <span class="detail-value">High</span>
+                                </div>
+                            </div>
+                            <div class="lead-actions">
+                                <button class="action-btn" data-action="message"><i class="fas fa-comment"></i> Message</button>
+                                <button class="action-btn" data-action="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                                <button class="action-btn" data-action="reminder"><i class="fas fa-bell"></i> Set Reminder</button>
+                                <button class="action-btn" data-action="edit"><i class="fas fa-edit"></i> Edit</button>
+                            </div>
+                        </div>
+                        
+                        <div class="lead-card">
+                            <div class="lead-header">
+                                <div class="lead-name">Sarah Johnson</div>
+                                <div class="lead-status">
+                                    <span class="status-badge new">New Lead</span>
+                                </div>
+                            </div>
+                            <div class="lead-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">sarah.j@example.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Phone</span>
+                                    <span class="detail-value">(555) 987-6543</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Company</span>
+                                    <span class="detail-value">Johnson Enterprises</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Interest Level</span>
+                                    <span class="detail-value">Medium</span>
+                                </div>
+                            </div>
+                            <div class="lead-actions">
+                                <button class="action-btn" data-action="message"><i class="fas fa-comment"></i> Message</button>
+                                <button class="action-btn" data-action="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                                <button class="action-btn" data-action="reminder"><i class="fas fa-bell"></i> Set Reminder</button>
+                                <button class="action-btn" data-action="edit"><i class="fas fa-edit"></i> Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="interested-tab">
+                        <div class="lead-card">
+                            <div class="lead-header">
+                                <div class="lead-name">Michael Brown</div>
+                                <div class="lead-status">
+                                    <span class="status-badge interested">Highly Interested</span>
+                                </div>
+                            </div>
+                            <div class="lead-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">m.brown@example.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Phone</span>
+                                    <span class="detail-value">(555) 456-7890</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Company</span>
+                                    <span class="detail-value">Brown Industries</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Product Interest</span>
+                                    <span class="detail-value">Premium Package</span>
+                                </div>
+                            </div>
+                            <div class="lead-actions">
+                                <button class="action-btn" data-action="message"><i class="fas fa-comment"></i> Message</button>
+                                <button class="action-btn" data-action="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                                <button class="action-btn" data-action="reminder"><i class="fas fa-bell"></i> Set Reminder</button>
+                                <button class="action-btn" data-action="edit"><i class="fas fa-edit"></i> Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="reminders-tab">
+                        <div class="reminder-card">
+                            <div class="reminder-header">
+                                <div class="reminder-title">Follow-up call with John Smith</div>
+                                <div class="reminder-due">Due: Tomorrow, 10:00 AM</div>
+                            </div>
+                            <div class="reminder-details">
+                                <p>Discuss pricing options and answer questions about the premium package.</p>
+                            </div>
+                            <div class="lead-actions">
+                                <button class="action-btn"><i class="fas fa-check"></i> Mark Complete</button>
+                                <button class="action-btn"><i class="fas fa-edit"></i> Reschedule</button>
+                            </div>
+                        </div>
+                        
+                        <div class="reminder-card">
+                            <div class="reminder-header">
+                                <div class="reminder-title">Send proposal to Sarah Johnson</div>
+                                <div class="reminder-due">Due: Friday, 3:00 PM</div>
+                            </div>
+                            <div class="reminder-details">
+                                <p>Include customized pricing based on our conversation.</p>
+                            </div>
+                            <div class="lead-actions">
+                                <button class="action-btn"><i class="fas fa-check"></i> Mark Complete</button>
+                                <button class="action-btn"><i class="fas fa-edit"></i> Reschedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Add Lead Modal -->
+    <div class="modal" id="addLeadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add New Lead</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="addLeadForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="leadName">Full Name</label>
+                        <input type="text" id="leadName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leadCompany">Company</label>
+                        <input type="text" id="leadCompany">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="leadEmail">Email</label>
+                        <input type="email" id="leadEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leadPhone">Phone</label>
+                        <input type="tel" id="leadPhone">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="leadSource">Lead Source</label>
+                    <select id="leadSource">
+                        <option value="">Select Source</option>
+                        <option value="website">Website</option>
+                        <option value="referral">Referral</option>
+                        <option value="social">Social Media</option>
+                        <option value="event">Event</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="leadInterest">Interest Level</label>
+                    <select id="leadInterest">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="leadNotes">Notes</label>
+                    <textarea id="leadNotes" placeholder="Add any relevant notes about this lead..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn" style="width: 100%;">Save Lead</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Message Modal -->
+    <div class="modal" id="messageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Send Message</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="message-form">
+                <div class="form-group">
+                    <label for="messageRecipient">To</label>
+                    <input type="text" id="messageRecipient" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="messageType">Message Type</label>
+                    <select id="messageType">
+                        <option value="sms">SMS Text</option>
+                        <option value="email">Email</option>
+                        <option value="whatsapp">WhatsApp</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="messageSubject">Subject</label>
+                    <input type="text" id="messageSubject">
+                </div>
+                
+                <div class="form-group">
+                    <label for="messageContent">Message</label>
+                    <textarea id="messageContent" placeholder="Type your message here..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Preview</label>
+                    <div class="message-preview" id="messagePreview">
+                        Your message will appear here...
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" class="btn" id="sendMessageBtn">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Reminder Modal -->
+    <div class="modal" id="reminderModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Set Reminder</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="reminderForm">
+                <div class="form-group">
+                    <label for="reminderFor">For Lead</label>
+                    <input type="text" id="reminderFor" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reminderTitle">Reminder Title</label>
+                    <input type="text" id="reminderTitle" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reminderDate">Date</label>
+                        <input type="date" id="reminderDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reminderTime">Time</label>
+                        <input type="time" id="reminderTime" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reminderNotes">Notes</label>
+                    <textarea id="reminderNotes" placeholder="Add details about this reminder..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn" style="width: 100%;">Set Reminder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Action completed successfully!</span>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
